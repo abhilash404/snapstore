@@ -11,3 +11,7 @@ starlette==0.48.0
 typing-inspection==0.4.1
 typing_extensions==4.15.0
 uvicorn==0.37.0
+SQLAlchemy==2.0.36
+asyncpg==0.29.0
+alembic==1.13.2   # optional, for migrations
+psycopg2-binary==2.9.9  # if you want sync
