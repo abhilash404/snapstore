@@ -1,8 +1,11 @@
 from .database import Base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey, DateTime, JSON
+from sqlalchemy.orm import relationship
 
-class Blog(Base):
-    __tablename__="blogs"
-    id = Column(Integer, primary_key=True,index=True)
-    title= Column(String)
-    body= Column(String)
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    email = Column(String, unique=True, nullable=False)
+    password_hash = Column(String, nullable=False)
+
+

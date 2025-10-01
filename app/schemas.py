@@ -1,11 +1,14 @@
 from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
-class Blog(BaseModel):
-    title: str
-    body: str
+class CreateUserRequest(BaseModel):
+    username: str
+    password: str
 
-class ShowBlog(BaseModel):
-    body: str     
-    class config(BaseModel):
-        model_config = ConfigDict(from_attributes=True)
+class Token(BaseModel):
+    access_toekn: str
+    token_type: str
+
+class us(BaseModel):
+    email: str
+    password: str
