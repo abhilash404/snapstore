@@ -6,9 +6,5 @@ class CreateUserRequest(BaseModel):
     password: str
 
 class Token(BaseModel):
-    access_toekn: str
+    access_token: str
     token_type: str
-
-class us(BaseModel):
-    email: str
-    password: str
